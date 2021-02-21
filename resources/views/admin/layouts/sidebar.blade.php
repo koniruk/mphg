@@ -17,16 +17,16 @@
                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
                 </svg> 作品管理</a>
             <ul class="c-sidebar-nav-dropdown-items">
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#"><span class="c-sidebar-nav-icon"></span> 作品一覧</a></li>
+                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.work') }}"><span class="c-sidebar-nav-icon"></span> 作品一覧</a></li>
             </ul>
             <ul class="c-sidebar-nav-dropdown-items">
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#"><span class="c-sidebar-nav-icon"></span> 作品登録</a></li>
+                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.work.new.get') }}"><span class="c-sidebar-nav-icon"></span> 作品登録</a></li>
             </ul>
             <ul class="c-sidebar-nav-dropdown-items">
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#"><span class="c-sidebar-nav-icon"></span> カテゴリ管理</a></li>
+                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.work.category.get') }}"><span class="c-sidebar-nav-icon"></span> カテゴリ管理</a></li>
             </ul>
             <ul class="c-sidebar-nav-dropdown-items">
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#"><span class="c-sidebar-nav-icon"></span> タグ管理</a></li>
+                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.work.tag.get') }}"><span class="c-sidebar-nav-icon"></span> タグ管理</a></li>
             </ul>
         </li>
         <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
@@ -34,10 +34,10 @@
                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
                 </svg> 新着情報管理</a>
             <ul class="c-sidebar-nav-dropdown-items">
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#"><span class="c-sidebar-nav-icon"></span> 新着情報一覧</a></li>
+                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.news') }}"><span class="c-sidebar-nav-icon"></span> 新着情報一覧</a></li>
             </ul>
             <ul class="c-sidebar-nav-dropdown-items">
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#"><span class="c-sidebar-nav-icon"></span> 新着情報登録</a></li>
+                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.news.new.get') }}"><span class="c-sidebar-nav-icon"></span> 新着情報登録</a></li>
             </ul>
         </li>
         <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
@@ -45,13 +45,16 @@
                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
                 </svg> お問い合わせ管理</a>
             <ul class="c-sidebar-nav-dropdown-items">
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#"><span class="c-sidebar-nav-icon"></span> お問い合わせ一覧</a></li>
+                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.contact') }}"><span class="c-sidebar-nav-icon"></span> お問い合わせ一覧</a></li>
             </ul>
             <ul class="c-sidebar-nav-dropdown-items">
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#"><span class="c-sidebar-nav-icon"></span> お問い合わせ登録</a></li>
+                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.contact.new.get') }}"><span class="c-sidebar-nav-icon"></span> お問い合わせ登録</a></li>
             </ul>
             <ul class="c-sidebar-nav-dropdown-items">
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#"><span class="c-sidebar-nav-icon"></span> テンプレート管理</a></li>
+                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.contact.template') }}"><span class="c-sidebar-nav-icon"></span> テンプレート一覧</a></li>
+            </ul>
+            <ul class="c-sidebar-nav-dropdown-items">
+                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.contact.template.new.get') }}"><span class="c-sidebar-nav-icon"></span> テンプレート登録</a></li>
             </ul>
         </li>
         <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
@@ -59,21 +62,34 @@
                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
                 </svg> メール管理</a>
             <ul class="c-sidebar-nav-dropdown-items">
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#"><span class="c-sidebar-nav-icon"></span> テンプレート管理</a></li>
+                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.mail') }}"><span class="c-sidebar-nav-icon"></span> テンプレート一覧</a></li>
+            </ul>
+            <ul class="c-sidebar-nav-dropdown-items">
+                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.mail.new.get') }}"><span class="c-sidebar-nav-icon"></span> テンプレート登録</a></li>
             </ul>
         </li>
         <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
                 <svg class="c-sidebar-nav-icon">
                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
-                </svg> 設定</a>
+                </svg> ワールド管理</a>
             <ul class="c-sidebar-nav-dropdown-items">
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#"><span class="c-sidebar-nav-icon"></span> ワールド管理</a></li>
+                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.world') }}"><span class="c-sidebar-nav-icon"></span> ワールド一覧</a></li>
             </ul>
+        </li>
+        <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
+                <svg class="c-sidebar-nav-icon">
+                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
+                </svg> ロケーション管理</a>
             <ul class="c-sidebar-nav-dropdown-items">
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#"><span class="c-sidebar-nav-icon"></span> ロケーション管理</a></li>
+                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.location') }}"><span class="c-sidebar-nav-icon"></span> ロケーション一覧</a></li>
             </ul>
+        </li>
+        <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
+                <svg class="c-sidebar-nav-icon">
+                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
+                </svg> サイズ管理</a>
             <ul class="c-sidebar-nav-dropdown-items">
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="#"><span class="c-sidebar-nav-icon"></span> ハウスサイズ管理</a></li>
+                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.size') }}"><span class="c-sidebar-nav-icon"></span> サイズ一覧</a></li>
             </ul>
         </li>
     </ul>
