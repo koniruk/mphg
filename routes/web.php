@@ -36,10 +36,6 @@ Route::group(['prefix' => 'admin','middleware' => 'auth:admin'],function(){
     Route::post('work/new','Admin\WorkController@edit')->name('admin.work.new.post');
     Route::get('work/{id}/edit','Admin\WorkController@edit')->name('admin.work.edit.get');
     Route::post('work/{id}/edit','Admin\WorkController@edit')->name('admin.work.edit.post');
-    Route::get('work/category','Admin\WorkController@category')->name('admin.work.category.get');
-    Route::post('work/category','Admin\WorkController@category')->name('admin.work.category.post');
-    Route::get('work/tag','Admin\WorkController@tag')->name('admin.work.tag.get');
-    Route::post('work/tag','Admin\WorkController@tag')->name('admin.work.tag.post');
     //新着情報管理
     Route::get('news','Admin\NewsController@index')->name('admin.news');
     Route::get('news/new','Admin\NewsController@edit')->name('admin.news.new.get');
@@ -57,12 +53,6 @@ Route::group(['prefix' => 'admin','middleware' => 'auth:admin'],function(){
     Route::post('contact/template/new','Admin\ContactController@templateEdit')->name('admin.contact.template.new.post');
     Route::get('contact/{id}/template/edit','Admin\ContactController@templateEdit')->name('admin.contact.template.edit.get');
     Route::post('contact/{id}/template/edit','Admin\ContactController@templateEdit')->name('admin.contact.template.edit.post');
-    //メール管理
-    Route::get('mail','Admin\MailController@index')->name('admin.mail');
-    Route::get('mail/new','Admin\MailController@edit')->name('admin.mail.new.get');
-    Route::post('mail/new','Admin\MailController@edit')->name('admin.mail.new.get');
-    Route::get('mail/{id}/edit','Admin\MailController@edit')->name('admin.mail.edit.get');
-    Route::post('mail/{id}/edit','Admin\MailController@edit')->name('admin.mail.edit.get');
     //ワールド管理
     Route::get('world','Admin\WorldController@index')->name('admin.world');
     Route::post('world/new','Admin\WorldController@edit')->name('admin.world.new.post');
