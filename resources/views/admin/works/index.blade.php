@@ -2,10 +2,22 @@
 
 @section('title','作品一覧')
 @section('content')
+    @if (session('flash_message'))
+        <div class="alert alert-success flash_message" role="alert">
+            {{ session('flash_message') }}
+        </div>
+    @endif
     <div class="card">
-        <div class="card-header"><i class="fa fa-align-justify"></i> 作品一覧</div>
+        <div class="card-header">作品一覧</div>
         <div class="card-body">
-            <table class="table table-responsive-sm">
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <input class="form-control" id="text-input" type="text" name="text-input" placeholder="">
+                </div>
+                <a class="btn btn-outline-custom" href="#">作品検索</a>
+            </div>
+            <label>14件中/14件を表示</label>
+            <table class="table table-responsive-sm table-hover table-outline">
                 <thead>
                 <tr>
                     <th><a href="#">ID</a></th>
@@ -18,60 +30,17 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>1</td>
-                    <td><a href="{{ route('admin.work.edit.get',1) }}">高級モダンハウス</a></td>
-                    <td>Ifrit</td>
-                    <td>シロガネ</td>
-                    <td>Mサイズ</td>
-                    <td>2021/01/12</td>
-                    <td><span class="badge badge-success">公開</span></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td><a href="{{ route('admin.work.edit.get',1) }}">理想の家</a></td>
-                    <td>Ultima</td>
-                    <td>ミスト・ヴィレッジ</td>
-                    <td>Sサイズ</td>
-                    <td>2021/01/12</td>
-                    <td><span class="badge badge-secondary">非公開</span></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td><a href="{{ route('admin.work.edit.get',1) }}">和モダン</a></td>
-                    <td>Zeromus</td>
-                    <td>ミスト・ヴィレッジ</td>
-                    <td>Sサイズ</td>
-                    <td>2021/01/12</td>
-                    <td><span class="badge badge-success">公開</span></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td><a href="{{ route('admin.work.edit.get',1) }}">高級モダンハウス</a></td>
-                    <td>Ifrit</td>
-                    <td>シロガネ</td>
-                    <td>Mサイズ</td>
-                    <td>2021/01/12</td>
-                    <td><span class="badge badge-success">公開</span></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td><a href="{{ route('admin.work.edit.get',1) }}">理想の家</a></td>
-                    <td>Ultima</td>
-                    <td>ミスト・ヴィレッジ</td>
-                    <td>Sサイズ</td>
-                    <td>2021/01/12</td>
-                    <td><span class="badge badge-secondary">非公開</span></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td><a href="{{ route('admin.work.edit.get',1) }}">和モダン</a></td>
-                    <td>Zeromus</td>
-                    <td>ミスト・ヴィレッジ</td>
-                    <td>Sサイズ</td>
-                    <td>2021/01/12</td>
-                    <td><span class="badge badge-success">公開</span></td>
-                </tr>
+                @foreach( $works as $work )
+                    <tr>
+                        <td>{{ $work->id }}</td>
+                        <td><a href="{{ route('admin.work.edit', $work->id) }}">{{ $work->name }}</a></td>
+                        <td>{{ $work->world->name }}</td>
+                        <td>{{ $work->location->name }}</td>
+                        <td>{{ $work->size->name }}</td>
+                        <td>{{ $work->created_at }}</td>
+                        <td>{{ $work->public_status->name }}</td>
+                    </tr>
+                @endforeach
                 </tbody>
             </table>
             <ul class="pagination">

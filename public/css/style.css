@@ -1,0 +1,117 @@
+.item-image__content {
+    position: relative;
+}
+.item-image__operetion--delete {
+    color: #ffffff;
+    position: absolute;
+    top: 1%;
+    left: 45%;
+}
+
+/* カスタムカラー変更 */
+.form-control:focus {
+    color: #768192;
+    background-color: #fff;
+    border-color: #3d9ea4;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(61, 156, 164, 0.5);
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+    color: #3d9ea4;
+}
+
+@media (hover: hover), (-ms-high-contrast: none) {
+    a:hover {
+        text-decoration: underline;
+        color: #3d9ea4;
+    }
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    line-height: 1.25;
+    border: 1px solid;
+    color: #3d9ea4;
+    background-color: #fff;
+    border-color: #d8dbe0;
+}
+
+.page-link:hover {
+    z-index: 2;
+    text-decoration: none;
+    color: #3d9ea4;
+    background-color: #d8dbe0;
+    border-color: #c4c9d0;
+}
+
+.page-link:focus {
+    z-index: 3;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(61, 156, 164, 0.5);
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #3d9ea4;
+    border-color: #3d9ea4;
+}
+
+/* カスタムカラー変更ここまで */
+
+/* カスタムカラー追加 */
+/* バッジ */
+.badge-custom {
+    color: #fff;
+    background-color: #3d9ea4;
+}
+
+/* ボタン */
+.btn-outline-custom {
+    color: #3d9ea4;
+    border-color: #3d9ea4;
+}
+
+@media (hover: hover), (-ms-high-contrast: none) {
+    .btn-outline-custom:hover {
+        color: #fff;
+        background-color: #3d9ea4;
+        border-color: #3d9ea4;
+    }
+}
+
+.btn-outline-custom:focus, .btn-outline-custom.focus {
+    box-shadow: 0 0 0 0.2rem rgba(61, 156, 164, 0.5);
+}
+
+.btn-outline-custom.disabled, .btn-outline-custom:disabled {
+    color: #3d9ea4;
+    background-color: transparent;
+}
+
+.btn-outline-custom:not(:disabled):not(.disabled):active, .btn-outline-custom:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #3d9ea4;
+    border-color: #3d9ea4;
+}
+
+.btn-outline-custom:not(:disabled):not(.disabled):active:focus, .btn-outline-custom:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(61, 156, 164, 0.5);
+}
+
+.show > .btn-outline-custom.dropdown-toggle {
+    color: #fff;
+    background-color: #3d9ea4;
+    border-color: #3d9ea4;
+}
+
+.show > .btn-outline-custom.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(61, 156, 164, 0.5);
+}
+/* カスタムカラー追加 ここまで */
+

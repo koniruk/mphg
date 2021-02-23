@@ -20,7 +20,7 @@
                 <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.work') }}"><span class="c-sidebar-nav-icon"></span> 作品一覧</a></li>
             </ul>
             <ul class="c-sidebar-nav-dropdown-items">
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.work.new.get') }}"><span class="c-sidebar-nav-icon"></span> 作品登録</a></li>
+                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('admin.work.create') }}"><span class="c-sidebar-nav-icon"></span> 作品登録</a></li>
             </ul>
         </li>
         <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">

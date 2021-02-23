@@ -32,10 +32,10 @@ Route::group(['prefix' => 'admin','middleware' => 'auth:admin'],function(){
     Route::get('dashboard','Admin\AdminController@dashboard')->name('admin.dashboard');
     //作品管理
     Route::get('work','Admin\WorkController@index')->name('admin.work');
-    Route::get('work/new','Admin\WorkController@edit')->name('admin.work.new.get');
-    Route::post('work/new','Admin\WorkController@edit')->name('admin.work.new.post');
-    Route::get('work/{id}/edit','Admin\WorkController@edit')->name('admin.work.edit.get');
-    Route::post('work/{id}/edit','Admin\WorkController@edit')->name('admin.work.edit.post');
+    Route::get('work/new','Admin\WorkController@create')->name('admin.work.create');
+    Route::post('work/new','Admin\WorkController@register')->name('admin.work.register');
+    Route::get('work/{id}/edit','Admin\WorkController@edit')->name('admin.work.edit');
+    Route::post('work/{id}/edit','Admin\WorkController@update')->name('admin.work.update');
     //新着情報管理
     Route::get('news','Admin\NewsController@index')->name('admin.news');
     Route::get('news/new','Admin\NewsController@edit')->name('admin.news.new.get');

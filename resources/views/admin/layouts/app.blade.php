@@ -6,6 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title')</title>
     <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 
 <body class="c-app">
@@ -26,5 +27,8 @@
 <!-- Scripts -->
 <script src="{{ asset('admin/vendors/@coreui/coreui/js/coreui.bundle.min.js') }}"></script>
 <script src="{{ asset('admin/vendors/@coreui/icons/js/svgxuse.min.js') }}"></script>
+<script src="https://kit.fontawesome.com/981d5cbf9e.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="{{ asset('js/admin.js') }}"></script>
 </body>
 </html>
